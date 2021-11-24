@@ -215,56 +215,117 @@ const num = Number('23');
 
 //Dot vs Bracket Notation
 
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// }
+
+// console.log(jonas);
+
+// console.log(jonas.lastName);
+// console.log(jonas['lastName']);
+
+// //Use bracket notation when you need to compute to get the property
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+
+// // console.log(jonas.'last' + nameKey);
+
+// //Sample use case of bracket notation
+// const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+
+// if (jonas[interestedIn]) {
+//     console.log(jonas[interestedIn]);
+// } else {
+//     console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
+// }
+
+// //Insert property and value to object
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasschmedtmann';
+
+// console.log(jonas);
+
+// // Challenge
+// // "Jonas has 3 friends, and his best friend is called Michael."
+
+// const firstName = jonas.firstName;
+// const numOfFriends = jonas.friends;
+// const bestFriend = numOfFriends.shift();
+
+// console.log(`${firstName} has ${numOfFriends.length} friends, and his best friend is called ${bestFriend}.`);
+
+
+// //Jonas Schmedtmann Implementation
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+//Object Methods
+
+
+//Objects can also hold functions because it is an expression
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
-    age: 2037 - 1991,
+    birthYear: 1991,
     job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
-}
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
 
-console.log(jonas);
+    //Any function attached to an object is called method
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
 
-console.log(jonas.lastName);
-console.log(jonas['lastName']);
+    //"this" is good to use inside the object
+    // calcAge: function () {
+    //     // console.log(this)
+    //     return 2037 - this.birthYear;
+    // }
 
-//Use bracket notation when you need to compute to get the property
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
 
-// console.log(jonas.'last' + nameKey);
+    getSummary2: function () {
+        this.age = 2037 - this.birthYear;
+        const checkLicense = this.hasDriversLicense ? 'a' : 'no';
 
-//Sample use case of bracket notation
-const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${checkLicense} driver's license.`
+    },
 
-if (jonas[interestedIn]) {
-    console.log(jonas[interestedIn]);
-} else {
-    console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
-}
+    //Jonas Schmedtmann Implementation
+    getSummary: function () {
 
-//Insert property and value to object
-jonas.location = 'Portugal';
-jonas['twitter'] = '@jonasschmedtmann';
+        return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+    }
 
-console.log(jonas);
+
+};
+
+console.log(jonas.calcAge());
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
 
 // Challenge
-// "Jonas has 3 friends, and his best friend is called Michael."
+// "Jonas is a 46-year old teacher, and he has a/no driver's license"
 
-const firstName = jonas.firstName;
-const numOfFriends = jonas.friends;
-const bestFriend = numOfFriends.shift();
+console.log(jonas.getSummary());
 
-console.log(`${firstName} has ${numOfFriends.length} friends, and his best friend is called ${bestFriend}.`);
+//Arrays are also objects
 
 
-//Jonas Schmedtmann Implementation
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 
 
-//Objec Methods
+
+
 
 
 
