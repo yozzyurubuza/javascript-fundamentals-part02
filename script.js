@@ -267,61 +267,77 @@ const num = Number('23');
 //Object Methods
 
 
-//Objects can also hold functions because it is an expression
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    birthYear: 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: true,
+// //Objects can also hold functions because it is an expression
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
 
-    //Any function attached to an object is called method
-    // calcAge: function (birthYear) {
-    //     return 2037 - birthYear;
-    // }
+//     //Any function attached to an object is called method
+//     // calcAge: function (birthYear) {
+//     //     return 2037 - birthYear;
+//     // }
 
-    //"this" is good to use inside the object
-    // calcAge: function () {
-    //     // console.log(this)
-    //     return 2037 - this.birthYear;
-    // }
+//     //"this" is good to use inside the object
+//     // calcAge: function () {
+//     //     // console.log(this)
+//     //     return 2037 - this.birthYear;
+//     // }
 
-    calcAge: function () {
-        this.age = 2037 - this.birthYear;
-        return this.age;
-    },
+//     calcAge: function () {
+//         this.age = 2037 - this.birthYear;
+//         return this.age;
+//     },
 
-    getSummary2: function () {
-        this.age = 2037 - this.birthYear;
-        const checkLicense = this.hasDriversLicense ? 'a' : 'no';
+//     getSummary2: function () {
+//         this.age = 2037 - this.birthYear;
+//         const checkLicense = this.hasDriversLicense ? 'a' : 'no';
 
-        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${checkLicense} driver's license.`
-    },
+//         return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${checkLicense} driver's license.`
+//     },
 
-    //Jonas Schmedtmann Implementation
-    getSummary: function () {
+//     //Jonas Schmedtmann Implementation
+//     getSummary: function () {
 
-        return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
-    }
-
-
-};
-
-console.log(jonas.calcAge());
-
-console.log(jonas.age);
-console.log(jonas.age);
-console.log(jonas.age);
-
-// Challenge
-// "Jonas is a 46-year old teacher, and he has a/no driver's license"
-
-console.log(jonas.getSummary());
-
-//Arrays are also objects
+//         return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+//     }
 
 
+// };
+
+// console.log(jonas.calcAge());
+
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+
+// // Challenge
+// // "Jonas is a 46-year old teacher, and he has a/no driver's license"
+
+// console.log(jonas.getSummary());
+
+// //Arrays are also objects
+
+//Iteration: The For Loop
+
+// console.log('Lifting weights repetition 1');
+// console.log('Lifting weights repetition 2');
+// console.log('Lifting weights repetition 3');
+// console.log('Lifting weights repetition 4');
+// console.log('Lifting weights repetition 5');
+// console.log('Lifting weights repetition 6');
+// console.log('Lifting weights repetition 7');
+// console.log('Lifting weights repetition 8');
+// console.log('Lifting weights repetition 9');
+// console.log('Lifting weights repetition 10');
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
 
 
 
