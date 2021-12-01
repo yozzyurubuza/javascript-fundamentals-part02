@@ -44,7 +44,7 @@
 // console.log(checkWinner(avgDolhins, avgKoalas));
 
 //Jonas Schedtmann Implementation
-
+/*
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 console.log(calcAverage(3, 4, 5));
@@ -73,6 +73,58 @@ scoreDolphins = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);
+
+*/
+
+//Retry of Coding Challenge 1
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+const scoreDolphins = calcAverage(85, 54, 41);
+const scoreKoalas = calcAverage(23, 34, 27);
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+    let winnerMessage;
+
+    if (avgDolphins >= avgKoalas * 2) {
+        winnerMessage = `Dolphins win (${avgDolphins} vs. ${avgKoalas})`
+    } else if (avgKoalas >= avgDolphins * 2) {
+        winnerMessage = `Koalas win (${avgKoalas} vs. ${avgDolphins})`
+    } else {
+        winnerMessage = `No one wins (${avgDolphins} vs. ${avgKoalas})`
+    }
+
+    return winnerMessage;
+}
+
+console.log(checkWinner(scoreDolphins, scoreKoalas));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
