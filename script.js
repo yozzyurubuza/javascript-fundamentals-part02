@@ -1,39 +1,4 @@
-'use strict';
-/*
-let hasDriversLicense = false;
-const passTest = true;
-
-if (passTest) hasDriversLicense = true;
-if (hasDriversLicense) console.log('I can drive :D');
-
-// const interface = 'Audio';
-// const private = 534;
-
-
-//Functions
-function logger() {
-    console.log('My name is Jonas');
-}
-
-// Calling / Running / Invoking the function
-logger();
-logger();
-logger();
-
-function fruitProcessor(apples, oranges) {
-    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
-    return juice;
-}
-
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
-console.log(fruitProcessor(5, 0));
-
-const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
-
-const num = Number('23');
-*/
+"use strict";
 
 //Function Declarations vs Expressions
 
@@ -44,7 +9,6 @@ const num = Number('23');
 //     return 2037 - birthYear;
 // }
 // const age1 = calcAge1(1991);
-
 
 // //Function Expression
 // const calcAge2 = function (birthYear) {
@@ -79,7 +43,6 @@ const num = Number('23');
 // function fruitProcessor(apples, oranges) {
 //     const applePieces = cutFruitPieces(apples);
 //     const orangePieces = cutFruitPieces(oranges);
-
 
 //     const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
 //     return juice;
@@ -152,7 +115,6 @@ const num = Number('23');
 
 // const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 // console.log(ages);
-
 
 // Basic Array Operations
 
@@ -259,13 +221,10 @@ const num = Number('23');
 
 // console.log(`${firstName} has ${numOfFriends.length} friends, and his best friend is called ${bestFriend}.`);
 
-
 // //Jonas Schmedtmann Implementation
 // console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 
-
 //Object Methods
-
 
 // //Objects can also hold functions because it is an expression
 // const jonas = {
@@ -304,7 +263,6 @@ const num = Number('23');
 
 //         return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
 //     }
-
 
 // };
 
@@ -358,7 +316,6 @@ const num = Number('23');
 // console.log(jonas[4])
 // jonas[5] does NOT exist
 
-
 // for (let i = 0; i < jonas.length; i++) {
 //     // Readin from jonas array
 //     console.log(jonas[i], typeof jonas[i]);
@@ -381,7 +338,7 @@ const num = Number('23');
 
 // console.log(ages);
 
-// // continue and break 
+// // continue and break
 
 // console.log('--- ONLY STRINGS ----');
 // for (let i = 0; i < jonas.length; i++) {
@@ -449,37 +406,25 @@ while (dice !== 6) {
 
 */
 
-
 // Reviewing Functions
 
 const calcAge = (currentYear, birthYear) => currentYear - birthYear;
 
 const calcRetirement = function (age) {
-    return 65 - age;
-}
+  return 65 - age;
+};
 
 const yearsUntilRetirement = function (currentYear, birthYear, firstName) {
+  const age = calcAge(currentYear, birthYear);
+  const retirement = calcRetirement(age);
 
-    const age = calcAge(currentYear, birthYear);
-    const retirement = calcRetirement(age);
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} year/s`);
+  } else {
+    console.log(`${firstName} has already retired...`);
+  }
 
-    if (retirement > 0) {
-        console.log(`${firstName} retires in ${retirement} year/s`);
-    } else {
-        console.log(`${firstName} has already retired...`);
-    }
-
-    return retirement;
-}
+  return retirement;
+};
 
 yearsUntilRetirement(2021, 1996, prompt("Enter Name: ", ""));
-
-
-
-
-
-
-
-
-
-
