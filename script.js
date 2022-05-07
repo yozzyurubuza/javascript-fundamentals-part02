@@ -1,44 +1,5 @@
 "use strict";
 
-// Basic Array Operations
-
-// const friends = ['Michael', 'Steven', 'Peter'];
-
-// // Add Elements
-// //Push is a method
-// const newLength = friends.push('Jay');
-// console.log(friends);
-// console.log(newLength);
-
-// //write into the beginning of array
-// friends.unshift('John');
-// console.log(friends);
-
-// //Remove Elements
-// //Take out the last element
-// friends.pop();
-// const popped = friends.pop();
-// console.log(popped);
-// console.log(friends);
-
-// //Remove first element
-// friends.shift();
-// console.log(friends);
-
-// // Find the position of the element in the array
-// console.log(friends.indexOf('Steven'));
-// console.log(friends.indexOf('Bob'));
-
-// friends.push(23);
-// // True or False if the element is inside the array
-// console.log(friends.includes('Steven'));
-// console.log(friends.includes('Bob'));
-// console.log(friends.includes('23')); // Strict
-
-// if (friends.includes('Steven')) {
-//     console.log('You have a friend called Steven');
-// }
-
 // Introduction to Objects
 
 // const jonasArray = [
